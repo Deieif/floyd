@@ -134,8 +134,8 @@
 
       this.backPeddle = function() {
         var backingUp = myGameArea.canvas.width - myGameArea.canvas.width;
-        if (this.y < 0) {
-          this.y = backingUp;
+        if (this.x < 0) {
+          this.x = backingUp;
         }
       };
     }
