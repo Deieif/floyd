@@ -119,6 +119,7 @@
         this.x += this.speedX;
         this.y += this.speedY;
         this.hitBottom();
+        this.hitTop();
       };
 
       this.hitBottom = function() {
@@ -127,7 +128,12 @@
           this.y = rockbottom;
         }
       }
-    }
+      this.hitTop = function() {
+        var rockTop = myGameArea.canvas.height - this.height;
+        if (this.y < rockTop) {
+          this.y = rockTop;
+        }
+      }
 
     function updateGameArea() {
       myBackground.newPos();
