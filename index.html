@@ -130,7 +130,7 @@
       };
       this.hitTop = function() {
         var rockTop = myGameArea.canvas.height + this.height;
-        if (this.y < rockTop) {
+        if (this.y > rockTop) {
           this.y = rockTop;
         }
       };
