@@ -155,7 +155,7 @@
         myGameArea.frameNo += 3;
         if (myGameArea.frameNo == 3 || everyinterval(400)) {
             x = myGameArea.canvas.width;
-            minHeight = 200;
+            minHeight = 0;
             maxHeight = 1000;
             height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
             minGap = 100;
@@ -180,19 +180,19 @@
     }
 
 function moveUp() {
-  myGamePiece.speedY + 1;
+  myGamePiece.speedY ++;
 }
 
 function moveDown() {
-  myGamePiece.speedY - 1;
+  myGamePiece.speedY --;
 }
 
 function moveRight() {
-  myGamePiece.speedX + 1;
+  myGamePiece.speedX ++;
 }
 
 function moveLeft() {
-  myGamePiece.speedX - 1;
+  myGamePiece.speedX --;
 }
 
   window.addEventListener('keydown', e => {
