@@ -68,7 +68,7 @@
   this.stop = function(){
     this.sound.pause();
   };
-}
+  }
 
 
   function component(width, height, color, x, y, type) {
@@ -127,14 +127,14 @@
         if (this.y > rockbottom) {
           this.y = rockbottom;
         }
-      }
+      };
       this.hitTop = function() {
         var rockTop = myGameArea.canvas.height - this.height;
         if (this.y < rockTop) {
           this.y = rockTop;
         }
-      }
-
+      };
+    }
     function updateGameArea() {
       myBackground.newPos();
       myBackground.update();
@@ -207,5 +207,4 @@ function moveLeft() {
           break;
     }
   });
-
 </script>
