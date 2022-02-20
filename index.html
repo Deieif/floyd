@@ -119,6 +119,7 @@
         this.x += this.speedX;
         this.y += this.speedY;
         this.hitBottom();
+        this.backPeddle();
         };
 
       this.hitBottom = function() {
@@ -128,6 +129,13 @@
           this.y = rockbottom;
         } else if (this.y < 0) {
           this.y = topCeiling;
+        }
+      };
+
+      this.backPeddle = function() {
+        var backingUp = myGameArea.canvas.width - myGameArea.canvas.width;
+        if (this.y < 0) {
+          this.y = backingUp;
         }
       };
     }
