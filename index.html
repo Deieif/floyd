@@ -118,7 +118,15 @@
       this.newPos = function() {
         this.x += this.speedX;
         this.y += this.speedY;
+        this.hitBottom();
       };
+
+      this.hitBottom = function() {
+        var hitBottom  = myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+          this.y = rockbottom;
+        }
+      }
     }
 
     function updateGameArea() {
