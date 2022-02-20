@@ -123,15 +123,12 @@
       };
 
       this.hitBottom = function() {
+        var topCeiling = myGameArea.canvas.height - myGameArea.canvas.height;
         var rockbottom = myGameArea.canvas.height - this.height;
-        if (this.y > rockbottom) {
+        if (this.y > rockbottom ) {
           this.y = rockbottom;
-        }
-      };
-      this.hitTop = function() {
-        var rockTop = 0 - this.height;
-        if (this.y > rockTop) {
-          this.y = rockTop;
+        } else if (this.y < 0;) {
+          this.y = topCeiling;
         }
       };
     }
