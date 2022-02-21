@@ -112,9 +112,9 @@
         var crash = true;
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
-            window.onbeforeunload = function (e) {
-              return 'restart';
-            }
+          window.confirm("Restart") {
+            window.location.reload();
+          };
         }
         return crash;
     };
