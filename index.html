@@ -164,6 +164,7 @@
             minGap = 150;
             maxGap = 500;
             gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+            myGamePiece.gravity = 0.009;
             myObstacles.push(new component(50, height, "George_Floyd_neck_knelt_on_by_police_officer.png", x, 0, "image"));
             myObstacles.push(new component(50, x - height - gap, "George_Floyd_neck_knelt_on_by_police_officer.png", x, height + gap, "image"));
         }
@@ -210,7 +211,4 @@ function jump() {
           break;
     }
   });
-  if (myGameArea.gravity <= 0.009) {
-    myGameArea.gravity = 0.009;
-  }
 </script>
