@@ -113,12 +113,8 @@
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
           };
-          if(crash = true) {
-            window.confirm("Restart")
-            window.location.reload();
-          }
-        return crash;
-        };
+            return crash;
+        }
       this.newPos = function() {
         this.x += this.speedX;
         this.y += this.speedY;
