@@ -83,7 +83,7 @@
     this.y = y;
     this.speedX = 0;
     this.speedY = 0;
-    this.gravity = 0.05;
+    this.gravity = 0.01;
     this.gravitySpeed = 0;
     this.update = function(){
         ctx = myGameArea.context;
@@ -199,12 +199,12 @@ function moveLeft() {
 }
 
 function jump() {
-  myGamePiece.gravity = -0.2;
+  myGamePiece.gravity = -0.5;
 }
 
   window.addEventListener('keydown', e => {
     switch(e.key) {
-      case 'spacebar':
+      case '32':
       jump();
           break;
     }
