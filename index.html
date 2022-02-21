@@ -83,7 +83,7 @@
     this.y = y;
     this.speedX = 0;
     this.speedY = 0;
-    this.gravity = 0.01;
+    this.gravity = 0.007;
     this.gravitySpeed = 0;
     this.update = function(){
         ctx = myGameArea.context;
@@ -198,13 +198,15 @@ function moveLeft() {
   myGamePiece.speedX --;
 }
 
-function jump(n) {
-  myGamePiece.gravity = n;
+function jump() {
+  myGamePiece.gravity = -0.2;
 }
 
   window.addEventListener('keydown', e => {
-    switch(e.keyCode = 32) {
-      jump(-5);
+    switch(e.key) {
+      case 'ArrowUp':
+      jump();
+          break;
     }
   });
 </script>
