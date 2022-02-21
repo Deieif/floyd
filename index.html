@@ -83,6 +83,8 @@
     this.y = y;
     this.speedX = 0;
     this.speedY = 0;
+    this.gravity = 0.05;
+    this.gravitySpeed = 0;
     this.update = function(){
         ctx = myGameArea.context;
       if (type == "image") {
@@ -116,8 +118,9 @@
             return crash;
         }
       this.newPos = function() {
+        this.gravitySpeed += this.gravity;
         this.x += this.speedX;
-        this.y += this.speedY;
+        this.y += this.speedY + this.gravitySpeed;
         this.hitBottom();
         this.backPeddle();
         };
@@ -195,19 +198,14 @@ function moveLeft() {
   myGamePiece.speedX --;
 }
 
+function jump() {
+  myGamePiece.gravity = -0.2;
+}
+
   window.addEventListener('keydown', e => {
     switch(e.key) {
-      case 'ArrowUp':
-      moveUp();
-          break;
-      case 'ArrowDown':
-      moveDown();
-          break;
-      case 'ArrowLeft':
-      moveLeft();
-          break;
-      case 'ArrowRight':
-      moveRight();
+      case 'spacebar':
+      jump();
           break;
     }
   });
