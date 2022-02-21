@@ -198,14 +198,14 @@ function moveLeft() {
   myGamePiece.speedX --;
 }
 
-function jump() {
-  myGamePiece.gravity = -0.5;
+function jump(n) {
+  myGamePiece.gravity = n;
 }
 
   window.addEventListener('keydown', e => {
     switch(e.key) {
       case '32':
-      jump();
+      jump(-5);
           break;
     }
   });
