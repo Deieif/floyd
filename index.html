@@ -30,12 +30,12 @@
 
 
   function startGame() {
+    myBackground = new component(1920, 1080, "R10961_image1.jpg", 0, 0, "image");
     myGameArea.start();
     mySound = new sound("yt1s.com - Juice WRLD  Wishing Well Official Music Video.mp3");
     myGamePiece = new component(60, 60, "s-l400.png", 30, 100, "image");
     myScore = new component("100px", "Major Mono Display", "black", 0, 80, "text");
-    myBackground = new component(1920, 1080, "R10961_image1.jpg", 0, 0, "image");
-  }
+      }
 
   var myGameArea = {
     canvas : document.createElement("canvas"),
